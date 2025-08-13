@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro Personal</title>
-    <!-- Importa las fuentes Quicksand y Roboto desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     
     <style>
@@ -19,196 +18,186 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif; /* Fuente limpia y legible para el cuerpo del documento */
-            /* Degradado de fondo con tonos suaves de azul y púrpura para un ambiente moderno y calmado */
-            background: linear-gradient(135deg, #a8c0ff, #3f2b96); /* Degradado suave de azul claro a morado profundo */
-            background-size: 200% 200%; /* Permite una animación de movimiento suave para el degradado */
-            animation: gradientAnimation 10s ease infinite; /* Animación fluida de 10 segundos, infinita */
+            font-family: 'Roboto', sans-serif;
+            /* Fondo gris claro para un look limpio y profesional */
+            background-color: #f4f7fa; 
             display: flex;
-            justify-content: center; /* Centra el contenido horizontalmente */
-            align-items: center; /* Centra el contenido verticalmente */
-            min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana */
-            padding: 20px; /* Espaciado interno para evitar que el contenido toque los bordes */
-            color: #333; /* Color de texto general */
-        }
-
-        /* Animación del degradado de fondo para crear un efecto dinámico */
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; } /* Inicia en el centro izquierdo */
-            50% { background-position: 100% 50%; } /* Se mueve al centro derecho */
-            100% { background-position: 0% 50%; } /* Vuelve al centro izquierdo, creando un ciclo continuo */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
         }
 
         .form-container {
-            background: #ffffff; /* Fondo blanco puro para que el formulario destaque */
-            padding: 40px; /* Espaciado interno generoso para el contenido del formulario */
-            border-radius: 15px; /* Bordes notablemente redondeados para un aspecto suave */
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada para un efecto de "flotación" */
-            max-width: 550px; /* Limita el ancho máximo para una mejor legibilidad en pantallas grandes */
-            width: 100%; /* Asegura que el formulario ocupe el ancho disponible en pantallas más pequeñas */
-            box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
-            position: relative; /* Necesario para posicionar el pseudo-elemento decorativo */
-            overflow: hidden; /* Asegura que el pseudo-elemento no se desborde del contenedor */
-            border: 1px solid rgba(255, 255, 255, 0.5); /* Borde sutil y translúcido */
-            animation: fadeInForm 1s ease-out; /* Animación de aparición para el formulario al cargarse */
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            /* Sombra sutil para un efecto de elevación elegante */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            max-width: 550px;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #e0e6ec; /* Borde sutil */
+            animation: fadeInForm 1s ease-out;
         }
 
         /* Animación de aparición para el formulario */
         @keyframes fadeInForm {
-            from { opacity: 0; transform: translateY(20px); } /* Inicia invisible y ligeramente hacia abajo */
-            to { opacity: 1; transform: translateY(0); } /* Termina visible en su posición final */
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Pseudo-elemento decorativo en la esquina superior izquierda del formulario */
+        /* Eliminamos el pseudo-elemento decorativo para un diseño más minimalista */
         .form-container::before {
-            content: ''; /* Contenido vacío, es solo para el estilo */
-            position: absolute; /* Posicionamiento absoluto dentro del contenedor del formulario */
-            top: -30px; /* Desplazado ligeramente hacia arriba */
-            left: -30px; /* Desplazado ligeramente hacia la izquierda */
-            width: 120px; /* Ancho del círculo */
-            height: 120px; /* Alto del círculo */
-            background: linear-gradient(45deg, #8a2be2, #00bfff); /* Degradado vibrante para el acento visual */
-            border-radius: 50%; /* Transforma el elemento en un círculo perfecto */
-            opacity: 0.8; /* Ligeramente transparente */
-            filter: blur(15px); /* Aplica un desenfoque para un efecto etéreo y suave */
-            z-index: 0; /* Asegura que esté detrás del contenido del formulario */
+            content: none;
         }
 
         h1 {
-            font-family: 'Quicksand', sans-serif; /* Fuente específica para el título del formulario */
-            font-weight: 700; /* Negrita para mayor impacto */
-            color: #2a52be; /* Azul profundo y moderno para el título */
-            text-align: center; /* Centra el texto del título */
-            margin-bottom: 35px; /* Espacio inferior después del título */
-            position: relative; /* Necesario para que el z-index funcione correctamente */
-            z-index: 1; /* Asegura que el título esté por encima del pseudo-elemento decorativo */
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Ligera sombra para dar profundidad al texto */
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            /* Título en azul oscuro para un toque corporativo */
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 35px;
+            position: relative;
+            z-index: 1;
+            text-shadow: none; /* Eliminamos la sombra del texto */
         }
 
         .form-group {
-            margin-bottom: 25px; /* Mayor espacio entre cada grupo de campo (label + input) */
-            position: relative; /* Para posibles posicionamientos de elementos internos */
+            margin-bottom: 25px;
+            position: relative;
         }
 
         .form-group label {
-            display: block; /* Asegura que la etiqueta ocupe su propia línea */
-            font-family: 'Quicksand', sans-serif; /* Fuente para las etiquetas de los campos */
-            font-weight: 600; /* Seminegrita para destacar las etiquetas */
-            color: #4a69bd; /* Azul medio para un contraste suave con el fondo blanco del formulario */
-            margin-bottom: 10px; /* Espacio debajo de la etiqueta */
-            font-size: 1em; /* Tamaño de fuente base */
-            transition: color 0.3s ease; /* Transición suave para el color del texto */
+            display: block;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            /* Color de etiqueta en gris oscuro para contraste */
+            color: #555;
+            margin-bottom: 10px;
+            font-size: 1em;
+            transition: color 0.3s ease;
         }
 
         input[type="text"],
         input[type="email"],
         input[type="number"],
-        input[type="tel"], /* Estilos para el campo de teléfono */
+        input[type="tel"],
         select {
-            width: 100%; /* Ocupa el 100% del ancho disponible */
-            padding: 14px 18px; /* Mayor padding para un mejor tacto y espacio visual */
-            border: 1px solid #dbe2ef; /* Borde más claro y estético */
-            border-radius: 10px; /* Bordes redondeados más suaves */
-            font-family: 'Roboto', sans-serif; /* Fuente para el texto dentro de los campos */
-            font-size: 1em; /* Tamaño de fuente base */
-            color: #495057; /* Color de texto oscuro para los campos */
-            background-color: #fcfdfe; /* Fondo muy ligero para los campos, casi blanco */
-            transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transiciones suaves para los efectos de enfoque */
+            width: 100%;
+            padding: 12px 15px; /* Padding ajustado para un aspecto más sobrio */
+            border: 1px solid #dcdfe6;
+            border-radius: 8px; /* Bordes más sutiles */
+            font-family: 'Roboto', sans-serif;
+            font-size: 1em;
+            color: #495057;
+            background-color: #fcfdfe;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
         }
 
-        /* Estilos de los campos al estar enfocados (cuando el usuario interactúa con ellos) */
+        /* Estilos de los campos al estar enfocados */
         input[type="text"]:focus,
         input[type="email"]:focus,
         input[type="number"]:focus,
         input[type="tel"]:focus,
         select:focus {
-            border-color: #6a5acd; /* Un tono púrpura moderno para el borde al enfocar */
-            box-shadow: 0 0 0 4px rgba(106, 90, 205, 0.2); /* Sombra de enfoque con el color del borde */
-            background-color: #ffffff; /* Fondo blanco completo al enfocar para mayor claridad */
-            outline: none; /* Elimina el contorno predeterminado del navegador */
+            /* Borde azul claro para indicar enfoque */
+            border-color: #007bff;
+            /* Sombra de enfoque sutil */
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+            background-color: #ffffff;
+            outline: none;
         }
 
         .radio-group {
-            display: flex; /* Permite organizar los radios en una fila */
-            flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea en pantallas pequeñas */
-            gap: 15px; /* Espacio entre los grupos de radio/label */
-            margin-top: 10px; /* Espacio superior para separar del label */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
         }
 
         .radio-group input[type="radio"] {
-            display: none; /* Oculta el input de radio nativo para personalizar su apariencia */
+            display: none;
         }
 
         .radio-group label {
-            background-color: #e0e6ec; /* Fondo suave para la etiqueta del radio */
-            padding: 12px 22px; /* Espaciado interno para las etiquetas */
-            border-radius: 25px; /* Forma de píldora más pronunciada */
-            cursor: pointer; /* Indica que es un elemento interactivo */
-            font-weight: 500; /* Peso de fuente medio */
-            font-size: 0.9em; /* Tamaño de fuente ligeramente más pequeño */
-            color: #555; /* Color de texto para las etiquetas de radio */
-            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease; /* Transiciones suaves para los efectos de interacción */
-            border: 1px solid #dcdfe6; /* Borde sutil para las píldoras */
+            background-color: #e9ecef;
+            padding: 12px 22px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9em;
+            color: #555;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+            border: 1px solid #dcdfe6;
         }
 
         /* Estilos de la etiqueta del radio cuando su input asociado está seleccionado */
         .radio-group input[type="radio"]:checked + label {
-            background: linear-gradient(45deg, #6a5acd, #7f00ff); /* Degradado vibrante cuando está seleccionado */
-            color: white; /* Color de texto blanco para el seleccionado */
-            box-shadow: 0 3px 8px rgba(106, 90, 205, 0.4); /* Sombra más pronunciada al seleccionar */
-            border-color: transparent; /* Borde transparente para un look más limpio */
-            transform: translateY(-2px); /* Pequeño efecto de elevación al seleccionar */
+            /* Fondo azul corporativo al seleccionar */
+            background-color: #007bff;
+            color: white;
+            /* Sombra de enfoque más sutil */
+            box-shadow: 0 2px 6px rgba(0, 123, 255, 0.2);
+            border-color: transparent;
+            transform: translateY(-1px);
         }
 
         /* Estilos de la etiqueta del radio al pasar el ratón por encima */
         .radio-group label:hover {
-            background-color: #d0d7e0; /* Cambio de color de fondo al pasar el ratón */
-            transform: translateY(-1px); /* Ligero efecto de elevación al pasar el ratón */
+            background-color: #cfd6de;
+            transform: translateY(-1px);
         }
 
         button[type="submit"] {
-            background: linear-gradient(45deg, #00bfff, #00ced1); /* Degradado cian/turquesa vibrante para el botón de envío */
-            color: white; /* Color de texto blanco */
-            padding: 16px 30px; /* Mayor padding para un botón más grande y fácil de tocar */
-            border: none; /* Sin borde */
-            border-radius: 10px; /* Bordes redondeados */
-            cursor: pointer; /* Indica que es un elemento clicable */
-            font-family: 'Quicksand', sans-serif; /* Fuente para el texto del botón */
-            font-size: 1.15em; /* Fuente ligeramente más grande */
-            font-weight: 700; /* Negrita para mayor impacto */
-            margin-top: 35px; /* Espacio superior para separar del último campo */
-            width: 100%; /* Ocupa el 100% del ancho del formulario */
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transiciones suaves para los efectos de interacción */
-            box-shadow: 0 5px 15px rgba(0, 191, 255, 0.3); /* Sombra con el color del botón para dar profundidad */
-            letter-spacing: 0.5px; /* Espaciado entre letras para mejorar la legibilidad */
+            /* Fondo de botón en azul corporativo sólido */
+            background-color: #007bff;
+            color: white;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1em;
+            font-weight: 700;
+            margin-top: 30px;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+            letter-spacing: 0.5px;
         }
 
         /* Estilos del botón de envío al pasar el ratón por encima */
         button[type="submit"]:hover {
-            background: linear-gradient(45deg, #00a2e3, #00b3b6); /* Tono más oscuro al pasar el ratón */
-            transform: translateY(-3px); /* Efecto de elevación más pronunciado */
-            box-shadow: 0 8px 20px rgba(0, 191, 255, 0.4); /* Sombra más grande al pasar el ratón */
+            /* Tono más oscuro al pasar el ratón */
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
         }
 
         /* Media queries para responsividad en pantallas más pequeñas (teléfonos y tablets) */
         @media (max-width: 600px) {
             .form-container {
-                padding: 25px; /* Reduce el padding del formulario */
-                border-radius: 10px; /* Reduce ligeramente el radio del borde */
+                padding: 25px;
+                border-radius: 10px;
             }
 
             h1 {
-                font-size: 1.8em; /* Ajusta el tamaño del título */
-                margin-bottom: 25px; /* Ajusta el espacio inferior del título */
+                font-size: 1.8em;
+                margin-bottom: 25px;
             }
 
             .form-group {
-                margin-bottom: 20px; /* Ajusta el espacio entre grupos de campos */
+                margin-bottom: 20px;
             }
 
             .form-group label {
-                font-size: 0.9em; /* Ajusta el tamaño de la fuente de las etiquetas */
-                margin-bottom: 8px; /* Ajusta el espacio inferior de las etiquetas */
+                font-size: 0.9em;
+                margin-bottom: 8px;
             }
 
             input[type="text"],
@@ -216,29 +205,29 @@
             input[type="number"],
             input[type="tel"],
             select {
-                padding: 12px 15px; /* Ajusta el padding de los campos de entrada */
-                font-size: 0.9em; /* Ajusta el tamaño de la fuente de los campos de entrada */
-                border-radius: 8px; /* Ajusta el radio del borde de los campos de entrada */
+                padding: 12px 15px;
+                font-size: 0.9em;
+                border-radius: 8px;
             }
 
             .radio-group {
-                flex-direction: column; /* Apila los botones de radio verticalmente en pantallas pequeñas */
-                gap: 12px; /* Ajusta el espacio entre los botones de radio apilados */
+                flex-direction: column;
+                gap: 12px;
             }
 
             .radio-group label {
-                width: 100%; /* Hace que las etiquetas de radio ocupen todo el ancho disponible */
-                text-align: center; /* Centra el texto dentro de las etiquetas de radio */
-                padding: 10px 18px; /* Ajusta el padding de las etiquetas de radio */
-                font-size: 0.85em; /* Ajusta el tamaño de la fuente de las etiquetas de radio */
-                border-radius: 20px; /* Ajusta el radio del borde de las etiquetas de radio */
+                width: 100%;
+                text-align: center;
+                padding: 10px 18px;
+                font-size: 0.85em;
+                border-radius: 20px;
             }
 
             button[type="submit"] {
-                padding: 14px 25px; /* Ajusta el padding del botón de envío */
-                font-size: 1em; /* Ajusta el tamaño de la fuente del botón de envío */
-                margin-top: 25px; /* Ajusta el espacio superior del botón de envío */
-                border-radius: 8px; /* Ajusta el radio del borde del botón de envío */
+                padding: 14px 25px;
+                font-size: 1em;
+                margin-top: 25px;
+                border-radius: 8px;
             }
         }
     </style>
