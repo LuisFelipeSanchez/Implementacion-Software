@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -17,38 +18,38 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            color: #333;
+            color: #333; /* Color de texto general */
             line-height: 1.6;
-            /* Paleta de colores cálida */
-            background: linear-gradient(135deg, #f9e4b7, #d4a5a5, #a66f6f);
-            background-size: 300% 300%;
-            animation: warmGradient 15s ease infinite;
+            /* Degradado de fondo con efecto aurora boreal */
+            background: linear-gradient(135deg, #0B0C1E, #1F0E4D, #4A0A6F, #00CC99, #00FFFF, #1F0E4D, #0B0C1E);
+            background-size: 300% 300%; /* Permite la animación de movimiento */
+            animation: auroraGradient 20s ease infinite; /* Animación de 20s, infinita */
             position: relative;
         }
 
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            color: #2c3e50;
+            color: #2c3e50; /* Color de los encabezados */
         }
 
         a {
             text-decoration: none;
-            color: #c0392b;
+            color: #c0392b; /* Color de los enlaces */
             transition: color 0.3s ease;
         }
 
         a:hover {
-            color: #e74c3c;
+            color: #e74c3c; /* Color de los enlaces al pasar el ratón */
         }
 
-        /* Animación de fondo cálido */
-        @keyframes warmGradient {
+        /* Animación de fondo Aurora Boreal */
+        @keyframes auroraGradient {
             0% {background-position: 0% 50%;}
             50% {background-position: 100% 50%;}
             100% {background-position: 0% 50%;}
         }
 
-        /* Mural artístico en los laterales con las nuevas URLs */
+        /* Mural artístico en los laterales con las URLs de imágenes (se mantienen) */
         body::before {
             content: '';
             position: fixed;
@@ -59,10 +60,10 @@
             pointer-events: none;
             z-index: -1;
             background-image:
-                url('https://i.pinimg.com/736x/9f/0a/40/9f0a405009a3849d323f53ba82d7e281.jpg'), /* Nueva imagen 1 */
-                url('https://i.pinimg.com/736x/29/b4/fb/29b4fb77641ab20e11b9f14097d0add1.jpg'), /* Nueva imagen 3 */
-                url('https://i.pinimg.com/736x/9f/0a/40/9f0a405009a3849d323f53ba82d7e281.jpg'), /* Nueva imagen 1 (repetida) */
-                url('https://i.pinimg.com/736x/75/15/f0/7515f0f6bd0703e360eac4b11bb51aa0.jpg'); /* Nueva imagen 4 */
+                url('https://i.pinimg.com/736x/9f/0a/40/9f0a405009a3849d323f53ba82d7e281.jpg'), /* Imagen 1 */
+                url('https://i.pinimg.com/736x/29/b4/fb/29b4fb77641ab20e11b9f14097d0add1.jpg'), /* Imagen 3 */
+                url('https://i.pinimg.com/736x/9f/0a/40/9f0a405009a3849d323f53ba82d7e281.jpg'), /* Imagen 1 (repetida) */
+                url('https://i.pinimg.com/736x/75/15/f0/7515f0f6bd0703e360eac4b11bb51aa0.jpg'); /* Imagen 4 */
             background-repeat: no-repeat;
             background-size: 60px, 80px, 40px, 100px;
             background-position: 10px 10%, 90px 50%, 30px 80%, 5px 60%;
@@ -79,17 +80,17 @@
             pointer-events: none;
             z-index: -1;
             background-image:
-                url('https://i.pinimg.com/736x/90/88/7c/90887cb0bc17f5becd6293071564a32f.jpg'), /* Nueva imagen 2 */
-                url('https://i.pinimg.com/736x/29/b4/fb/29b4fb77641ab20e11b9f14097d0add1.jpg'), /* Nueva imagen 3 */
-                url('https://i.pinimg.com/736x/90/88/7c/90887cb0bc17f5becd6293071564a32f.jpg'), /* Nueva imagen 2 (repetida) */
-                url('https://i.pinimg.com/736x/9f/0a/40/9f0a405009a3849d323f53ba82d7e281.jpg'); /* Nueva imagen 1 */
+                url('https://i.pinimg.com/736x/90/88/7c/90887cb0bc17f5becd6293071564a32f.jpg'), /* Imagen 2 */
+                url('https://i.pinimg.com/736x/29/b4/fb/29b4fb77641ab20e11b9f14097d0add1.jpg'), /* Imagen 3 */
+                url('https://i.pinimg.com/736x/90/88/7c/90887cb0bc17f5becd6293071564a32f.jpg'), /* Imagen 2 (repetida) */
+                url('https://i.pinimg.com/736x/9f/0a/40/9f0a405009a3849d323f53ba82d7e281.jpg'); /* Imagen 1 */
             background-repeat: no-repeat;
             background-size: 90px, 70px, 110px, 50px;
             background-position: 85% 15%, 10% 70%, 75% 95%, 95% 40%;
             opacity: 0.1;
         }
 
-        /* Estilo del encabezado (header) con la foto de la biblioteca */
+        /* Estilo del encabezado (header) con la foto de la biblioteca (se mantiene) */
         header {
             background: url('https://i.pinimg.com/736x/06/70/c0/0670c038502df7edf5987211a050502f.jpg') no-repeat center center/cover;
             color: white;
@@ -127,7 +128,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Barra de navegación con estilo moderno */
+        /* Barra de navegación con estilo moderno (se mantiene) */
         nav {
             background: #fff;
             padding: 15px 20px;
@@ -167,7 +168,7 @@
             width: 100%;
         }
 
-        /* Secciones con fondos sutiles y bordes decorativos */
+        /* Secciones con fondos sutiles y bordes decorativos (se mantienen) */
         section {
             max-width: 960px;
             margin: 50px auto;
@@ -216,7 +217,7 @@
             color: #e67e22;
         }
 
-        /* Galería de cultura con efectos */
+        /* Galería de cultura con efectos (se mantiene) */
         .culture-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -265,7 +266,7 @@
             opacity: 1;
         }
 
-        /* Sección de ubicaciones con diseño de tarjetas */
+        /* Sección de ubicaciones con diseño de tarjetas (se mantiene) */
         .locations-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -304,7 +305,7 @@
             font-weight: bold;
         }
 
-        /* Pie de página con estilo */
+        /* Pie de página con estilo (se mantiene) */
         footer {
             text-align: center;
             padding: 30px;
@@ -313,7 +314,7 @@
             margin-top: 60px;
         }
 
-        /* Media queries para responsividad */
+        /* Media queries para responsividad (se mantienen) */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2.8em;
@@ -469,7 +470,38 @@
 
         document.querySelectorAll('.location-card').forEach(card => {
             card.addEventListener('click', () => {
-                alert(`Seleccionaste: ${card.textContent}`);
+                // Modificado para usar un modal personalizado en lugar de alert()
+                const modal = document.createElement('div');
+                modal.style.position = 'fixed';
+                modal.style.top = '50%';
+                modal.style.left = '50%';
+                modal.style.transform = 'translate(-50%, -50%)';
+                modal.style.backgroundColor = '#fff';
+                modal.style.padding = '20px';
+                modal.style.borderRadius = '8px';
+                modal.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+                modal.style.zIndex = '9999';
+                modal.style.textAlign = 'center';
+
+                const message = document.createElement('p');
+                message.textContent = `Seleccionaste: ${card.textContent}`;
+                message.style.marginBottom = '15px';
+
+                const closeButton = document.createElement('button');
+                closeButton.textContent = 'Cerrar';
+                closeButton.style.padding = '10px 20px';
+                closeButton.style.backgroundColor = '#e67e22';
+                closeButton.style.color = 'white';
+                closeButton.style.border = 'none';
+                closeButton.style.borderRadius = '5px';
+                closeButton.style.cursor = 'pointer';
+                closeButton.addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                });
+
+                modal.appendChild(message);
+                modal.appendChild(closeButton);
+                document.body.appendChild(modal);
             });
         });
 
